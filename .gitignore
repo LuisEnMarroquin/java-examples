@@ -6,6 +6,6 @@
 # Ignore all this files
 *.class
 .classpath
-.proyect
+.project
 .dropbox
 desktop.ini
