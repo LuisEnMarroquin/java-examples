@@ -1,0 +1,11 @@
+# Ignore all this folders
+.metadata/
+.recomenders/
+.settings/
+
+# Ignore all this files
+*.class
+.classpath
+.proyect
+.dropbox
+desktop.ini
