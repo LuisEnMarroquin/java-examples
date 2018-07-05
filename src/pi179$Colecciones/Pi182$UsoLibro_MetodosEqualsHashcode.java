@@ -6,7 +6,7 @@ public class Pi182$UsoLibro_MetodosEqualsHashcode { // Lo que determina que los 
 		
 		Libros Libros1 = new Libros("Programando en Java", "Luis Marroquín", 25);
 		
-		Libros Libros2 = new Libros("Programando en Java", "Luis Marroquín", 25);
+		Libros Libros2 = new Libros("Programando en Java 2", "Luis Marroquín", 25);
 		
 		if(Libros1.equals(Libros2)) { // El método equals de la clase Object no es capaz de dsitinguir si 2 objetos son iguales en clases propias, por eso hay que sobreescribirlo
 			System.out.println("Es el mismo libro");
