@@ -8,4 +8,8 @@
 .classpath
 .project
 .dropbox
+
+# File managers
 desktop.ini
+.DS_Store
+.directory
