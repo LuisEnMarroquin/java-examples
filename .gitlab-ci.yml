@@ -3,6 +3,7 @@ image: node:lts-alpine
 pages:
   stage: deploy
   script:
+    - yarn install --production --ignore-optional --pure-lockfile --non-interactive
     - yarn build
   artifacts:
     paths:
