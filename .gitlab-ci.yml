@@ -5,7 +5,7 @@ cache:
     - node_modules
 
 variables:
-  PUBLIC_URL: /my-awesome-app
+  PUBLIC_URL: /ci
 
 stages:
   - deploy
