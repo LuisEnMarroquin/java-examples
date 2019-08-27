@@ -1,0 +1,11 @@
+image: node:lts-alpine
+
+pages:
+  stage: deploy
+  script:
+    - yarn build
+  artifacts:
+    paths:
+      - build
+  only:
+    - master
