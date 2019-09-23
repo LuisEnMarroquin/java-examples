@@ -5,7 +5,7 @@ cache:
     - node_modules
 
 variables:
-  PUBLIC_URL: /ci
+  PUBLIC_URL: /
 
 stages:
   - deploy
