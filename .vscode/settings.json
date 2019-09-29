@@ -8,12 +8,13 @@
     "**/*.class": true
   },
   "files.exclude": {
-    "**/.classpath": true,
+    "**/*.class": true,
     "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true,
     "**/.DS_Store": true,
+    "**/.settings": true,
+    "**/.classpath": true,
     "**/.directory": true,
-    "**/desktop.ini": true
+    "**/desktop.ini": true,
+    "**/.factorypath": true
   }
 }

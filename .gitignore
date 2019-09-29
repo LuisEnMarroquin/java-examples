@@ -1,5 +1,6 @@
 # Java
 *.class
+*.exe
 
 # File managers
 .DS_Store
