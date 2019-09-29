@@ -1,0 +1,19 @@
+{
+  "editor.tabSize": 2,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "editor.detectIndentation": false,
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "**/*.class": true
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/.DS_Store": true,
+    "**/.directory": true,
+    "**/desktop.ini": true
+  }
+}

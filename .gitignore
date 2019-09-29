@@ -1,0 +1,10 @@
+# Java
+*.class
+
+# File managers
+.DS_Store
+.directory
+desktop.ini
+
+# VS Code
+.vscode/launch.json
