@@ -1,0 +1,60 @@
+Modificador de acceso private
+El modificador private en Java es el más restrictivo de todos, básicamente cualquier elemento de una clase que sea privado 
+puede ser accedido únicamente por la misma clase y por nada más. Es decir, si por ejemplo, un atributo es privado solo puede 
+ser accedido por lo métodos o constructores de la misma clase. Ninguna otra clase sin importar la relación que tengan podrá 
+tener acceso a ellos.
+
+El modificador por defecto (default)
+Java nos da la opción de no usar un modificador de acceso y al no hacerlo, el elemento tendrá un acceso conocido como default 
+o acceso por defecto que permite que tanto la propia clase como las clases del mismo paquete accedan a dichos componentes (de 
+aquí la importancia de declararle siempre un paquete a nuestras clases).
+
+Modificador de acceso protected
+El modificador de acceso protected nos permite acceso a los componentes con dicho modificador desde la misma clase, clases 
+del mismo paquete y clases que hereden de ella (incluso en diferentes paquetes). 
+
+Modificador public
+El modificador de acceso public es el más permisivo de todos, básicamente public es lo contrario a private en todos los aspectos 
+(lógicamente), esto quiere decir que si un componente de una clase es public, tendremos acceso a él desde cualquier clase o 
+instancia sin importar el paquete o procedencia de ésta.
+
+Orden de retrictividad = Public -> Protected -> Default -> Private
+
+	Misma clase			Cualquier lado			Mismo paquete			Herencia
++		0				0				0				0
+#		0								0				0
+-		0							
+_		0								0
+
+- El contructor es solo para inicializar variables y lleva el mismo nombre de la clase.
+- Los arrays son un conjunto de datos del mismo tipo, se inventaron para no tener que estar declarando tantas variables y solo declarar un arreglo.
+- Un array es un ubjeto que es creado con la palabra new.
+
+- Exámen: Cuando se quiere acceder a una posición que no existe de un arreglo lanzará este error = java.lang.ArrayIndexOutOfBoundsException
+- [] = indican que es un array.
+- Todas las clases de Java heredan de otra, por defecto todas heredan de Object = extends Object.
+
+- Decalración de arreglos bidimensionales.
+	- int [][] twoDim = new int [][4]; //ilegal = El primer arreglo debe llevar afuerzas un valor, el segundo puede llevarlo o no, da igual para ese.
+	- int [][] twoDim = new int [4][4]; //correct
+
+- 	for(int element : list){ //Esto es un for each, solo se imprimen los puntos pero no sabemos que elemento estamos imprimiendo.
+		System.out.println(element);
+	}
+
+- p = 2_333_456 = 2333456 //Esos guiones bajos son para hacer el número más legible para el programador pero es lo mismo pónerlos o no.
+
+- Sintaxis para una herencia.
+<modifier> class <name> extends something { }
+
+- Para un overrride el modificador de acceso debe ser igual o menos restrictivo que el original.
+
+- Polimorfismo: Sobrecarga de métodos. Un método declarado condiferente lista de métodos.
+
+Access control: Java Modifiers
+
+Modifier	Same Class	Same Package	Subclass	Universe
+private		yes
+default		yes		yes
+protected	yes		yes		yes
+public		yes		yes		yes		yes

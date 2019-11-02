@@ -1,6 +1,11 @@
 # Java
-*.class
 *.exe
+*.class
+.proyect
+.classpath
+.metadata/
+.settings/
+.recomenders/
 
 # File managers
 .DS_Store
