@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![Standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![GitLab](https://gitlab.com/LuisEnMarroquin/react/badges/master/pipeline.svg)](https://gitlab.com/LuisEnMarroquin/react/pipelines)
+[![GitHub](https://github.com/LuisEnMarroquin/react-github-gitlab-pages/workflows/Pages/badge.svg)](https://github.com/LuisEnMarroquin/react-github-gitlab-pages/actions)
+
 ## Available Scripts
 
 In the project directory, you can run:
