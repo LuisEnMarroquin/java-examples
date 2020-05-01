@@ -1,0 +1,18 @@
+image: node:lts-alpine
+
+cache:
+  paths:
+    - node_modules
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - sh deploy.sh
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
