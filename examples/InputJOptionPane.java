@@ -1,9 +1,8 @@
-// 4) Modifica la aplicación anterior, para que nos pida el nombre que queremos introducir
-// Recuerda usar JOptionPane o Scanner Lector
+package examples;
 
 import javax.swing.JOptionPane;
 
-public class $1_4 {
+public class InputJOptionPane {
 
   public static void main(String[] args) {
 

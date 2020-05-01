@@ -1,6 +1,8 @@
+package examples;
+
 import java.util.Scanner;
 
-public class Rentas {
+public class Blockbuster {
   public static void main(String[] args) {
     Scanner in = new Scanner( System.in );
 

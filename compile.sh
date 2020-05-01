@@ -1,1 +1,1 @@
-javac $1.java && java $1
+javac pildoras/$1.java && java pildoras/$1

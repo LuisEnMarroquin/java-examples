@@ -1,10 +1,12 @@
+package examples;
+
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
-public class Date {
+public class ClassDate {
 
-  public static void main(String[] args){
+  public static void main(String[] args) {
 
     System.out.println(LocalDate.now()); // 1 forma de crear una fecha
 
@@ -12,7 +14,7 @@ public class Date {
 
     try {
       System.out.println(LocalDate.of(999999, 12, 32));
-    } catch(DateTimeException e) {
+    } catch (DateTimeException e) {
       System.out.println("Fecha Incorrecta");
     }
 
@@ -40,14 +42,16 @@ public class Date {
 
     Calendar c = Calendar.getInstance();
     c.set(Calendar.YEAR, 1990);
-    System.out.println(c.get(Calendar.YEAR)); // Para obtener el dato se utiliza el m�todo '.get()' de la clase 'Calendar'
+    System.out.println(c.get(Calendar.YEAR));
 
     System.out.println("//////////////////////////////////////////////////");
 
     LocalDate daniel = LocalDate.of(1993, 11, 9);
     daniel.getDayOfYear();
-    DateTimeFormatter F = DateTimeFormatter.ofPattern("hh:mm"); // Solo funciona en 'Java 8' = Es para darle un formato a la fecha
-    F.format(LocalTime.now()); System.out.println(F); // As� no funciona
+    DateTimeFormatter F = DateTimeFormatter.ofPattern("hh:mm"); // Solo funciona en 'Java 8' = Es para darle un formato
+                                                                // a la fecha
+    F.format(LocalTime.now());
+    System.out.println(F); // As� no funciona
     System.out.println(F.format(LocalTime.now())); // As� si funciona
 
   }

@@ -1,8 +1,10 @@
+package examples;
+
 // Declare two numeric variables and show sum, subtraction, multiplication, division, and module
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class operations {
+public class OperationSymbols {
   public static void main(String[] args) {
 
     Scanner myInput = new Scanner(System.in);
@@ -10,12 +12,16 @@ public class operations {
     boolean errorIs2 = false;
 
     try {
-      System.out.println("Enter number 1: "); num1 = myInput.nextInt();
+      System.out.println("Enter number 1: ");
+      num1 = myInput.nextInt();
       errorIs2 = true;
-      System.out.println("Enter number 2: "); num2 = myInput.nextInt();
+      System.out.println("Enter number 2: ");
+      num2 = myInput.nextInt();
     } catch (InputMismatchException e) { // When (value !== number)
-      if (errorIs2) System.out.println("You should only enter integer numbers, the second will be taken as 1");
-      else System.out.println("You should only enter integer numbers, both numbers will be taken as 1");
+      if (errorIs2)
+        System.out.println("You should only enter integer numbers, the second will be taken as 1");
+      else
+        System.out.println("You should only enter integer numbers, both numbers will be taken as 1");
     }
 
     myInput.close();

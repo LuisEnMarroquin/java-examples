@@ -1,9 +1,11 @@
+package examples;
+
 import java.util.Scanner;
 
-class App {
+class NumberSequence {
   public static void main(String[] args) {
 
-    System.out.println("Teclea la secuencia de numeros:");
+    System.out.println("Type the sequence of numbers: ");
 
     int f1 = 1; String s1 = ""; Scanner n1 = new Scanner(System.in); s1 = n1.nextLine(); int x1 = Integer.parseInt(s1); n1.close(); if (x1 > 0) { f1 = 0; }
     int f2 = 1; String s2 = ""; Scanner n2 = new Scanner(System.in); s2 = n2.nextLine(); int x2 = Integer.parseInt(s2); n2.close(); if (x2 > 0) { f2 = 0; }
@@ -16,7 +18,7 @@ class App {
     int f9 = 1; String s9 = ""; Scanner n9 = new Scanner(System.in); s9 = n9.nextLine(); int x9 = Integer.parseInt(s9); n9.close(); if (x9 > 0) { f9 = 0; }
     int f0 = 1; String s0 = ""; Scanner n0 = new Scanner(System.in); s0 = n0.nextLine(); int x0 = Integer.parseInt(s0); n0.close(); if (x0 > 0) { f0 = 0; }
 
-    System.out.println("La mascara que le corresponde es: " + f1 + f2 + f3 + f4 + f5 + f6 + f7 + f8 + f9 + f0 );
+    System.out.println("The mask that corresponds is: " + f1 + f2 + f3 + f4 + f5 + f6 + f7 + f8 + f9 + f0 );
 
   }
 }

@@ -1,7 +1,6 @@
 package pildoras;
 
 public class P007_ConstantsOperators {
-
   public static void main(String[] args) {
 
     final int constante = 256;
@@ -22,10 +21,9 @@ public class P007_ConstantsOperators {
     double resultado = cm / inchesValue;
     System.out.println("In " + cm + " cm there are " + resultado + " inches");
 
-    // Declare and initialize many variable in one line
+    // Declare and initialize a lot of variables in one line
     int num1 = 12, num2 = 23, num3 = 34;
     System.out.println(num1 + num2 + num3);
 
   }
-
 }

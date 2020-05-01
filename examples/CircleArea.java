@@ -1,8 +1,8 @@
-// 5) Haz una aplicación que calcule el área de un círculo (pi * R2).
+package examples;
 
 import java.util.Scanner;
 
-public class $1_5 {
+public class CircleArea {
 
   public static void main(String[] args) {
 

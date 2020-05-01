@@ -1,4 +1,4 @@
-package random_mp3;
+package mp3;
 
 import java.util.concurrent.TimeUnit;
 

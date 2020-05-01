@@ -1,7 +1,6 @@
 package pildoras;
 
 public class P006_PrimitiveTypes {
-
   public static void main(String editable[]) {
 
     // There are 8 primitive data types in Java
@@ -37,5 +36,4 @@ public class P006_PrimitiveTypes {
     System.out.println("boolean: " + true_false);
 
   }
-
 }
