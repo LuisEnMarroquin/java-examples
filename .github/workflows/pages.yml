@@ -1,4 +1,4 @@
-name: Pages
+name: Deploy GitHub Pages
 
 on:
   push:
@@ -10,12 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
     - name: Build app
       run: sh deploy.sh
+
     - name: Copy CNAME
       run: cp CNAME public/CNAME
-    - name: List files
-      run: cd public && ls -R
+
     - name: Deploy with github-pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:

@@ -17,6 +17,7 @@
     "**/.classpath": true,
     "**/.directory": true,
     "**/desktop.ini": true,
-    "**/.factorypath": true
+    "**/.factorypath": true,
+    "**/node_modules/": true
   }
 }
