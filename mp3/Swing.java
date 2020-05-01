@@ -2,11 +2,11 @@ package random_mp3;
 
 import javax.swing.*;
 
-public class Swing extends JFrame{
+public class Swing extends JFrame {
 
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	public Swing() {
+  public Swing() {
     super("hello");
     super.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     super.add(new JLabel("Hello, world!"));

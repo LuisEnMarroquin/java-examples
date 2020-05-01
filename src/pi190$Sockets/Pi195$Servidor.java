@@ -13,89 +13,86 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 public class Pi195$Servidor {
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		MarcoServidor5 mimarco=new MarcoServidor5();
-		
-		mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			
-	}	
+
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+
+    MarcoServidor5 mimarco=new MarcoServidor5();
+
+    mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+  }
 }
 
-class MarcoServidor5 extends JFrame implements Runnable{ // Implementa Runnable para hacer 'Threads' para que esté permanentemente a la escucha de mensajes
-	
-	public MarcoServidor5(){
-		
-		setBounds(1200,300,280,350);				
-			
-		JPanel milamina= new JPanel();
-		
-		milamina.setLayout(new BorderLayout());
-		
-		areatexto=new JTextArea();
-		
-		milamina.add(areatexto,BorderLayout.CENTER);
-		
-		add(milamina);
-		
-		setVisible(true);
-		
-		// Creando el hilo // Al haber puesto esto dentro del constructor se ejecutará el hilo automáticamente
-		Thread miHilo = new Thread(this);
-		miHilo.start(); // Llama al método 'run()'
-		
-	}
-	
-	@Override // Sobreescribiendo el método 'run()' de la interfaz 'Runnable'
-	public void run() {
-		System.out.println("Estoy a la escucha");
-		try {
-			
-			ServerSocket servidor = new ServerSocket(9999); // Escuchando el puerto 9999
-			
-			String nick, ip, mensaje; // Variables donde se almacenarán los datos que se reciben
-			
-			PaqueteEnvio5 paqueteRecibido; // Intancia de 'PaqueteEnvio5' llamada 'paqueteRecibido' // Hay que inicializar la variable para poder usarla
-			
-			while(true) { // Dentro de un bucle infinito para que acepte más mensajes
-				
-				Socket miSocket = servidor.accept(); // Diciendo que acepte cualquier conección del exterior
-				
-				//DataInputStream flujoEntrada = new DataInputStream(miSocket.getInputStream()); // Que abra un flujo de datos que usa como medio de entrada el Socket
-				ObjectInputStream paqueteDatos = new ObjectInputStream(miSocket.getInputStream());
-				
-				//String mensajeTexto = flujoEntrada.readUTF(); // Se almacena en la variable 'mensajeTexto' lo que viaja por el flujo de datos que viene del cliente
-				paqueteRecibido = (PaqueteEnvio5) paqueteDatos.readObject(); // Lanza excepción de tipo 'ClassNotFoundException'
-				
-				//areatexto.append("\n" + mensajeTexto); // Insertando el texto en el area de texto
-				nick = paqueteRecibido.getNick();
-				ip = paqueteRecibido.getIp();
-				mensaje = paqueteRecibido.getMensaje();
-				
-				areatexto.append(nick + ": " + mensaje + " para " + ip + "\n");
-				
-				Socket enviaDestinatario = new Socket(ip, 9090); // Socket para enviar los datos al destinatario
-				ObjectOutputStream paqueteReenvio = new ObjectOutputStream(enviaDestinatario.getOutputStream()); // Objeto de tipo 'ObjectOutputStream' llamado 'paqueteReenvio'
-				paqueteReenvio.writeObject(paqueteRecibido);
-				
-				paqueteReenvio.close(); // Cerrando el flujo de datos
-				
-				enviaDestinatario.close(); // Cerrando el Socket de envio al destinatario
-				
-				miSocket.close(); // Cerrando el Socket de recepción del mensaje
-				
-			}
-			
-		} catch (IOException | ClassNotFoundException e) {
-			e.printStackTrace();
-		} 
-	}
-	
-	private	JTextArea areatexto;
+class MarcoServidor5 extends JFrame implements Runnable{ // Implementa Runnable para hacer 'Threads' para que estï¿½ permanentemente a la escucha de mensajes
+
+  public MarcoServidor5(){
+
+    setBounds(1200,300,280,350);
+
+    JPanel milamina= new JPanel();
+
+    milamina.setLayout(new BorderLayout());
+
+    areatexto=new JTextArea();
+
+    milamina.add(areatexto,BorderLayout.CENTER);
+
+    add(milamina);
+
+    setVisible(true);
+
+    // Creando el hilo // Al haber puesto esto dentro del constructor se ejecutarï¿½ el hilo automï¿½ticamente
+    Thread miHilo = new Thread(this);
+    miHilo.start(); // Llama al mï¿½todo 'run()'
+
+  }
+
+  @Override // Sobreescribiendo el mï¿½todo 'run()' de la interfaz 'Runnable'
+  public void run() {
+    System.out.println("Estoy a la escucha");
+    try {
+
+      ServerSocket servidor = new ServerSocket(9999); // Escuchando el puerto 9999
+
+      String nick, ip, mensaje; // Variables donde se almacenarï¿½n los datos que se reciben
+
+      PaqueteEnvio5 paqueteRecibido; // Intancia de 'PaqueteEnvio5' llamada 'paqueteRecibido' // Hay que inicializar la variable para poder usarla
+
+      while(true) { // Dentro de un bucle infinito para que acepte mï¿½s mensajes
+
+        Socket miSocket = servidor.accept(); // Diciendo que acepte cualquier conecciï¿½n del exterior
+
+        //DataInputStream flujoEntrada = new DataInputStream(miSocket.getInputStream()); // Que abra un flujo de datos que usa como medio de entrada el Socket
+        ObjectInputStream paqueteDatos = new ObjectInputStream(miSocket.getInputStream());
+
+        //String mensajeTexto = flujoEntrada.readUTF(); // Se almacena en la variable 'mensajeTexto' lo que viaja por el flujo de datos que viene del cliente
+        paqueteRecibido = (PaqueteEnvio5) paqueteDatos.readObject(); // Lanza excepciï¿½n de tipo 'ClassNotFoundException'
+
+        //areatexto.append("\n" + mensajeTexto); // Insertando el texto en el area de texto
+        nick = paqueteRecibido.getNick();
+        ip = paqueteRecibido.getIp();
+        mensaje = paqueteRecibido.getMensaje();
+
+        areatexto.append(nick + ": " + mensaje + " para " + ip + "\n");
+
+        Socket enviaDestinatario = new Socket(ip, 9090); // Socket para enviar los datos al destinatario
+        ObjectOutputStream paqueteReenvio = new ObjectOutputStream(enviaDestinatario.getOutputStream()); // Objeto de tipo 'ObjectOutputStream' llamado 'paqueteReenvio'
+        paqueteReenvio.writeObject(paqueteRecibido);
+
+        paqueteReenvio.close(); // Cerrando el flujo de datos
+
+        enviaDestinatario.close(); // Cerrando el Socket de envio al destinatario
+
+        miSocket.close(); // Cerrando el Socket de recepciï¿½n del mensaje
+
+      }
+
+    } catch (IOException | ClassNotFoundException e) {
+      e.printStackTrace();
+    }
+  }
+
+  private  JTextArea areatexto;
 
 }
-
-
-	

@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class $1_5 {
 
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 
-		Scanner entrada = new Scanner(System.in);
+    Scanner entrada = new Scanner(System.in);
 
-		System.out.println("Introduce el radio del círculo");
+    System.out.println("Introduce el radio del círculo");
 
-		int radio = entrada.nextInt();
+    int radio = entrada.nextInt();
 
-		entrada.close();
+    entrada.close();
 
-		System.out.println("El area de un círculo de radio " + radio + " es: " + (Math.PI * Math.pow(radio, 2)) + ".");
+    System.out.println("El area de un círculo de radio " + radio + " es: " + (Math.PI * Math.pow(radio, 2)) + ".");
 
-	}
+  }
 
 }

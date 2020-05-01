@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Trash {
   public static void main(String[] args) {
     int m = 6;
@@ -8,7 +6,7 @@ public class Trash {
     do {
       System.out.println(a);
       a-=2;
-    } while(a>=0);
+    } while (a >= 0);
     for(int z=10; z>=1; z--){
       System.out.println("z" + z);
     }

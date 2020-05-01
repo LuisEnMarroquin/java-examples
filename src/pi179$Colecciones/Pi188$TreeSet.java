@@ -5,81 +5,81 @@ import java.util.TreeSet;
 
 public class Pi188$TreeSet { // TreeSet permite ordenaciones
 
-	public static void main(String[] args) {
-		
-		TreeSet<String> ordenaPersonas = new TreeSet<String>(); // Colección de tipo TreeSet
-		ordenaPersonas.add("Sandra");
-		ordenaPersonas.add("Amanda");
-		ordenaPersonas.add("Diana");
-		System.out.println("Imprimiendo los nombres por orden alfabético por default, y al ser datos de tipo String se implementa la interfaz 'comparable' que tiene el método 'compareTo' que ordena los objetos.");
-		for(String s : ordenaPersonas) {
-			System.out.println(s);
-		}
-		
-		System.out.println("Ordenando objetos de tipo Articulo3 (orden en base a la interfaz 'Comparable' de acuerdo al número)");
-		
-		Articulo3 primero = new Articulo3(1, "Primer Artículo");
-		Articulo3 segundo = new Articulo3(2, "Segundo Artículo");
-		Articulo3 tercero = new Articulo3(3, "Este es el tercer Artículo");
+  public static void main(String[] args) {
 
-		TreeSet<Articulo3> ordenaArticulos = new TreeSet<Articulo3>();
-		ordenaArticulos.add(tercero);
-		ordenaArticulos.add(primero);
-		ordenaArticulos.add(segundo);
-		
-		for (Articulo3 art : ordenaArticulos) {
-			System.out.println(art.getDescripcion());
-		}
-		
-		System.out.println("Ordenando objetos de tipo Articulo3 (en base a la descripcion en orden alfabético)");
-		
-		//Articulo3 comparadorArticulos = new Articulo3(); // Objeto de tipo 'Comparator'
-		//TreeSet<Articulo3> ordenaArticulos2 = new TreeSet<Articulo3>(comparadorArticulos);
-		
-		ComparadorArticulos comparaArt = new ComparadorArticulos();
-		TreeSet<Articulo3> ordenaArticulos2 = new TreeSet<Articulo3>(comparaArt);
-		
-		ordenaArticulos2.add(primero);
-		ordenaArticulos2.add(segundo);
-		ordenaArticulos2.add(tercero);
-		
-		for (Articulo3 art : ordenaArticulos2) {
-			System.out.println(art.getDescripcion());
-		} 
-		
-	}
-	
+    TreeSet<String> ordenaPersonas = new TreeSet<String>(); // Colecciï¿½n de tipo TreeSet
+    ordenaPersonas.add("Sandra");
+    ordenaPersonas.add("Amanda");
+    ordenaPersonas.add("Diana");
+    System.out.println("Imprimiendo los nombres por orden alfabï¿½tico por default, y al ser datos de tipo String se implementa la interfaz 'comparable' que tiene el mï¿½todo 'compareTo' que ordena los objetos.");
+    for(String s : ordenaPersonas) {
+      System.out.println(s);
+    }
+
+    System.out.println("Ordenando objetos de tipo Articulo3 (orden en base a la interfaz 'Comparable' de acuerdo al nï¿½mero)");
+
+    Articulo3 primero = new Articulo3(1, "Primer Artï¿½culo");
+    Articulo3 segundo = new Articulo3(2, "Segundo Artï¿½culo");
+    Articulo3 tercero = new Articulo3(3, "Este es el tercer Artï¿½culo");
+
+    TreeSet<Articulo3> ordenaArticulos = new TreeSet<Articulo3>();
+    ordenaArticulos.add(tercero);
+    ordenaArticulos.add(primero);
+    ordenaArticulos.add(segundo);
+
+    for (Articulo3 art : ordenaArticulos) {
+      System.out.println(art.getDescripcion());
+    }
+
+    System.out.println("Ordenando objetos de tipo Articulo3 (en base a la descripcion en orden alfabï¿½tico)");
+
+    //Articulo3 comparadorArticulos = new Articulo3(); // Objeto de tipo 'Comparator'
+    //TreeSet<Articulo3> ordenaArticulos2 = new TreeSet<Articulo3>(comparadorArticulos);
+
+    ComparadorArticulos comparaArt = new ComparadorArticulos();
+    TreeSet<Articulo3> ordenaArticulos2 = new TreeSet<Articulo3>(comparaArt);
+
+    ordenaArticulos2.add(primero);
+    ordenaArticulos2.add(segundo);
+    ordenaArticulos2.add(tercero);
+
+    for (Articulo3 art : ordenaArticulos2) {
+      System.out.println(art.getDescripcion());
+    }
+
+  }
+
 }
 
 
 class Articulo3 implements Comparable<Articulo3>{
-	
-	public Articulo3(int num, String desc) {
-		numeroArticulo = num;
-		descripcion  = desc;
-	}
-	
-	public String getDescripcion() { // Getter que devuelve la descripción
-		return descripcion;
-	}
 
-	@Override // Interfaz 'Comparable'
-	public int compareTo(Articulo3 o) { // Construyendo mi propio método 'compareTo' para ordenar los objetos de tipo Articulo3
-		return numeroArticulo - o.numeroArticulo;
-	}
-	
-	private int numeroArticulo;
-	private String descripcion;
-	
+  public Articulo3(int num, String desc) {
+    numeroArticulo = num;
+    descripcion  = desc;
+  }
+
+  public String getDescripcion() { // Getter que devuelve la descripciï¿½n
+    return descripcion;
+  }
+
+  @Override // Interfaz 'Comparable'
+  public int compareTo(Articulo3 o) { // Construyendo mi propio mï¿½todo 'compareTo' para ordenar los objetos de tipo Articulo3
+    return numeroArticulo - o.numeroArticulo;
+  }
+
+  private int numeroArticulo;
+  private String descripcion;
+
 }
 
 class ComparadorArticulos implements Comparator<Articulo3>{
 
-	@Override
-	public int compare(Articulo3 o1, Articulo3 o2) { // Comparando ambos
-		String descripcion1 = o1.getDescripcion();
-		String descripcion2 = o2.getDescripcion();
-		return descripcion1.compareTo(descripcion2);
-	}
-	
+  @Override
+  public int compare(Articulo3 o1, Articulo3 o2) { // Comparando ambos
+    String descripcion1 = o1.getDescripcion();
+    String descripcion2 = o2.getDescripcion();
+    return descripcion1.compareTo(descripcion2);
+  }
+
 }

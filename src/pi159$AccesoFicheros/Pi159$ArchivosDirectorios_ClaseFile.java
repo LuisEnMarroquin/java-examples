@@ -4,50 +4,50 @@ import java.io.*;
 
 public class Pi159$ArchivosDirectorios_ClaseFile {
 
-	public static void main(String[] args) {
-		
-		// ----------------- Archivo ----------------------
-		
-		File archivo = new File("ejemploArchivo");
-		
-		System.out.println("El archivo existe: " + archivo.exists());
-		
-		System.out.println("La ruta donde estaría este archivo es: " + archivo.getAbsolutePath());
+  public static void main(String[] args) {
 
-		// ----------------- Carpeta ----------------------
-		
-		File carpeta = new File("bin");
-		
-		System.out.println("La carpeta existe: " + carpeta.exists());
-		
-		System.out.println("La ruta donde está la carpeta es: " + carpeta.getAbsolutePath());
-		
-		System.out.println(); // ----------------- ------------------------------
-		
-		File ruta = new File("D:/TestJava");
-		
-		System.out.println("La ruta donde está la carpeta es: " + ruta.getAbsolutePath());
-		
-		String[] nombresArchivos = ruta.list(); // Almacenando en un array de Strings llamado 'nombresArchivos' todos los nombres de todos los archivos que están dentro de la carpeta
-	
-		System.out.println("Los archivos de " + ruta.getAbsolutePath() + " son: ");
-		
-		for(int i = 0; i < nombresArchivos.length; i++) {
-			
-			System.out.println(nombresArchivos[i]);
-			
-			// Evaluando si es un archivo o es un directorio
-			File f = new File(ruta.getAbsolutePath(), nombresArchivos[i]); // Este constructor de file guarda algo así: "D:/TestJava/archivo.txt"
-			if(f.isDirectory()) { // Evaluendo si f es un folder
-				String[] archivosSubcarpeta = f.list(); // Almacenando en un array de Strings llamado 'archivosSubcarpeta' todos los nombres de todos los archivos que están dentro de la carpeta
-				for(int j = 0 ; j < archivosSubcarpeta.length; j++) {
-					System.out.println(" - " + archivosSubcarpeta[j]);
-				}
-			}
-				
-			
-		}
-		
-	}
+    // ----------------- Archivo ----------------------
+
+    File archivo = new File("ejemploArchivo");
+
+    System.out.println("El archivo existe: " + archivo.exists());
+
+    System.out.println("La ruta donde estarï¿½a este archivo es: " + archivo.getAbsolutePath());
+
+    // ----------------- Carpeta ----------------------
+
+    File carpeta = new File("bin");
+
+    System.out.println("La carpeta existe: " + carpeta.exists());
+
+    System.out.println("La ruta donde estï¿½ la carpeta es: " + carpeta.getAbsolutePath());
+
+    System.out.println(); // ----------------- ------------------------------
+
+    File ruta = new File("D:/TestJava");
+
+    System.out.println("La ruta donde estï¿½ la carpeta es: " + ruta.getAbsolutePath());
+
+    String[] nombresArchivos = ruta.list(); // Almacenando en un array de Strings llamado 'nombresArchivos' todos los nombres de todos los archivos que estï¿½n dentro de la carpeta
+
+    System.out.println("Los archivos de " + ruta.getAbsolutePath() + " son: ");
+
+    for(int i = 0; i < nombresArchivos.length; i++) {
+
+      System.out.println(nombresArchivos[i]);
+
+      // Evaluando si es un archivo o es un directorio
+      File f = new File(ruta.getAbsolutePath(), nombresArchivos[i]); // Este constructor de file guarda algo asï¿½: "D:/TestJava/archivo.txt"
+      if(f.isDirectory()) { // Evaluendo si f es un folder
+        String[] archivosSubcarpeta = f.list(); // Almacenando en un array de Strings llamado 'archivosSubcarpeta' todos los nombres de todos los archivos que estï¿½n dentro de la carpeta
+        for(int j = 0 ; j < archivosSubcarpeta.length; j++) {
+          System.out.println(" - " + archivosSubcarpeta[j]);
+        }
+      }
+
+
+    }
+
+  }
 
 }

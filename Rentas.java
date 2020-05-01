@@ -93,59 +93,59 @@ public class Rentas {
 
 class Pelicula {
 
-	private String nombre;
+  private String nombre;
   private int costoRenta;
   private int dias;
   private String genero;
   private int agno;
   private int rentado; // 0 || 1
 
-	public Pelicula(String a1, int a2, int a3, String a4, int a5, int a6) { // Constructor
-		nombre = a1;
+  public Pelicula(String a1, int a2, int a3, String a4, int a5, int a6) { // Constructor
+    nombre = a1;
     costoRenta = a2;
     dias = a3;
     genero = a4;
     agno = a5;
     rentado = a6;
-	}
+  }
 
-	public String mostrarDatos() {
+  public String mostrarDatos() {
     System.out.println("Nombre: " + nombre + ", costo: $" + costoRenta + ", dias: " + dias + ", genero: " + genero + ", año: " + agno + ", rentado: " + rentado); return "";
-	}
+  }
 
   public int estaRentado() {
-		if (rentado == 1) System.out.println(nombre); return rentado;
-	}
+    if (rentado == 1) System.out.println(nombre); return rentado;
+  }
 
 }
 
 class Videojuego {
 
-	private String nombre;
+  private String nombre;
   private int costoRenta;
   private int dias;
   private String plataforma;
   private int rentado; // 0 || 1
 
-	public Videojuego(String a1, int a2, int a3, String a4, int a5) { // Constructor
-		nombre = a1;
+  public Videojuego(String a1, int a2, int a3, String a4, int a5) { // Constructor
+    nombre = a1;
     costoRenta = a2;
     dias = a3;
     plataforma = a4;
     rentado = a5;
-	}
+  }
 
-	public String mostrarDatos() {
-		System.out.println("Nombre: " + nombre + ", costo: $" + costoRenta + ", dias: " + dias + ", plataforma: " + plataforma + ", rentado: " + rentado); return "";
-	}
+  public String mostrarDatos() {
+    System.out.println("Nombre: " + nombre + ", costo: $" + costoRenta + ", dias: " + dias + ", plataforma: " + plataforma + ", rentado: " + rentado); return "";
+  }
 
   public int estaRentado() {
-		if (rentado == 1) System.out.println(nombre); return rentado;
-	}
+    if (rentado == 1) System.out.println(nombre); return rentado;
+  }
 
   public int esXBOX() {
-		if (plataforma.equals("Xbox One")) return 1;
+    if (plataforma.equals("Xbox One")) return 1;
     else return 0;
-	}
+  }
 
 }

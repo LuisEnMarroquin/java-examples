@@ -1,5 +1,5 @@
-package com.txtlearn.blackjack01;
+package blackjack;
 
 public enum Suit {
-	HEART, SPADE, DIAMOND, CLUB
+  HEART, SPADE, DIAMOND, CLUB
 }

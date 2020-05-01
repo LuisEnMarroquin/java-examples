@@ -4,26 +4,26 @@ import javax.swing.JOptionPane;
 
 public class Pi150$DebuggingConEclipse {
 
-	public static void main(String[] args) {
-		
-		int elementos = Integer.parseInt(JOptionPane.showInputDialog("Introduce cantidad de elementos de la matríz"));
-		
-		int numerosAleatorios[] = new int[elementos];
+  public static void main(String[] args) {
 
-		for(int i = 0; i < numerosAleatorios.length; i++) {
-			numerosAleatorios[i] = (int)(Math.random()*100);
-		}
-		
-		for(int elem : numerosAleatorios) {
-			System.out.println(elem);
-		}
-		
-	}
+    int elementos = Integer.parseInt(JOptionPane.showInputDialog("Introduce cantidad de elementos de la matrï¿½z"));
+
+    int numerosAleatorios[] = new int[elementos];
+
+    for(int i = 0; i < numerosAleatorios.length; i++) {
+      numerosAleatorios[i] = (int)(Math.random()*100);
+    }
+
+    for(int elem : numerosAleatorios) {
+      System.out.println(elem);
+    }
+
+  }
 
 }
 
 // Como debuggear en eclipse
-	// Hacer un punto de insercción en la barra lateral izquierda
-	// Usar el botón de 'Debug' que está al lado izquierdo del botón de ejecución del programa Java
-	// Ir a la vista debug
-	// Es buena idea repasar el video 150 y 151 para Debuggear bien
+  // Hacer un punto de insercciï¿½n en la barra lateral izquierda
+  // Usar el botï¿½n de 'Debug' que estï¿½ al lado izquierdo del botï¿½n de ejecuciï¿½n del programa Java
+  // Ir a la vista debug
+  // Es buena idea repasar el video 150 y 151 para Debuggear bien

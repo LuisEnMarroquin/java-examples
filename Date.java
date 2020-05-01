@@ -4,52 +4,52 @@ import java.util.Calendar;
 
 public class Date {
 
-	public static void main(String[] args){
-		
-		System.out.println(LocalDate.now()); // 1 forma de crear una fecha
-		
-		System.out.println(LocalDate.of(2018, 10, 10));
-		
-		try {
-			System.out.println(LocalDate.of(999999, 12, 32));
-		} catch(DateTimeException e) {
-			System.out.println("Fecha Incorrecta");
-		}
-		
-		System.out.println(LocalTime.now()); // 2 forma de crear una fecha
+  public static void main(String[] args){
 
-		System.out.println(LocalDateTime.now()); // 3 forma de crear una fecha
-		
-		System.out.println("//////////////////////////////////////////////////");
-		
-		System.out.println("Cumpleaños de Toño");
-		LocalDate cumple = LocalDate.of(1996, Month.MARCH, 28);
-		System.out.println("Toño cumple años el " + cumple);
-		
-		System.out.println(cumple.plusDays(2)); // Imprime un aumento de 2 días a la fecha
-		cumple.plusDays(2); // Aumentando 2 días a la fecha
-		System.out.println(cumple); // No imprime los 2 días extra porque la variable es inmutable
-		
-		cumple = cumple.plusDays(2); // Esta es la única forma de aumentar 2 días
-		System.out.println(cumple); // Imprimiendo la fecha ya aumentada con los 2 días
-		
-		cumple = cumple.plusWeeks(2); // Aumentando 2 semanas la fecha de 'cumple'
-		System.out.println(cumple); // El valor de la variable no va a cambiar al menos que se vuelva a asignar
-		
-		System.out.println("//////////////////////////////////////////////////");
-		
-		Calendar c = Calendar.getInstance();
-		c.set(Calendar.YEAR, 1990);
-		System.out.println(c.get(Calendar.YEAR)); // Para obtener el dato se utiliza el método '.get()' de la clase 'Calendar'
-		
-		System.out.println("//////////////////////////////////////////////////");
-		
-		LocalDate daniel = LocalDate.of(1993, 11, 9);
-		daniel.getDayOfYear();
-		DateTimeFormatter F = DateTimeFormatter.ofPattern("hh:mm"); // Solo funciona en 'Java 8' = Es para darle un formato a la fecha
-		F.format(LocalTime.now()); System.out.println(F); // Así no funciona
-		System.out.println(F.format(LocalTime.now())); // Así si funciona
-		
-	}
+    System.out.println(LocalDate.now()); // 1 forma de crear una fecha
+
+    System.out.println(LocalDate.of(2018, 10, 10));
+
+    try {
+      System.out.println(LocalDate.of(999999, 12, 32));
+    } catch(DateTimeException e) {
+      System.out.println("Fecha Incorrecta");
+    }
+
+    System.out.println(LocalTime.now()); // 2 forma de crear una fecha
+
+    System.out.println(LocalDateTime.now()); // 3 forma de crear una fecha
+
+    System.out.println("//////////////////////////////////////////////////");
+
+    System.out.println("Cumpleaï¿½os de Toï¿½o");
+    LocalDate cumple = LocalDate.of(1996, Month.MARCH, 28);
+    System.out.println("Toï¿½o cumple aï¿½os el " + cumple);
+
+    System.out.println(cumple.plusDays(2)); // Imprime un aumento de 2 dï¿½as a la fecha
+    cumple.plusDays(2); // Aumentando 2 dï¿½as a la fecha
+    System.out.println(cumple); // No imprime los 2 dï¿½as extra porque la variable es inmutable
+
+    cumple = cumple.plusDays(2); // Esta es la ï¿½nica forma de aumentar 2 dï¿½as
+    System.out.println(cumple); // Imprimiendo la fecha ya aumentada con los 2 dï¿½as
+
+    cumple = cumple.plusWeeks(2); // Aumentando 2 semanas la fecha de 'cumple'
+    System.out.println(cumple); // El valor de la variable no va a cambiar al menos que se vuelva a asignar
+
+    System.out.println("//////////////////////////////////////////////////");
+
+    Calendar c = Calendar.getInstance();
+    c.set(Calendar.YEAR, 1990);
+    System.out.println(c.get(Calendar.YEAR)); // Para obtener el dato se utiliza el mï¿½todo '.get()' de la clase 'Calendar'
+
+    System.out.println("//////////////////////////////////////////////////");
+
+    LocalDate daniel = LocalDate.of(1993, 11, 9);
+    daniel.getDayOfYear();
+    DateTimeFormatter F = DateTimeFormatter.ofPattern("hh:mm"); // Solo funciona en 'Java 8' = Es para darle un formato a la fecha
+    F.format(LocalTime.now()); System.out.println(F); // Asï¿½ no funciona
+    System.out.println(F.format(LocalTime.now())); // Asï¿½ si funciona
+
+  }
 
 }
