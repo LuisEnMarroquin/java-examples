@@ -1,10 +1,9 @@
 package pildoras;
 import java.util.*;
 
-//El bucle Do While causa que el c�digo se ejecute al menos una vez corrigiendo el problema del archivo Pi019$AdivinaElNumero.java
+//Si el n�mero aleatorio es igual a 0 dir� que lo has conseguido en 0 intentos porque no entrar� ninguna vez en el bucle while ya que de inicio la condici�n "while(numero!=aleatorio)" es falsa.
 
-public class Pi020$AdivinaElNumero_DoWhile {
-
+public class P019_GuessTheNumberWhile {
   public static void main(String[] args) {
 
     System.out.println("Observando como trabaja Math.random() (devuelve un double): "+ Math.random());
@@ -19,7 +18,7 @@ public class Pi020$AdivinaElNumero_DoWhile {
     int numero = 0;
     int intentos = 0;
 
-    do{ //Antes de usar una variable en Java hay que inicializarla, por eso se inicializaron "numero" e "intentos" arriba.
+    while(numero!=aleatorio){ //Antes de usar una variable en Java hay que inicializarla, por eso se inicializaron "numero" e "intentos" arriba.
 
       intentos++;
 
@@ -33,12 +32,11 @@ public class Pi020$AdivinaElNumero_DoWhile {
         System.out.println("M�s alto"); //El n�mero es m�s alto que el que has introducido.
       }
 
-    }while(numero!=aleatorio);
+    }
 
     entrada.close(); //No se puede cerrar entrada dentro del while porque intentar� cerrarlo varias veces y a la segunda habr� un error en tiempo de ejecuci�n.
 
     System.out.println("Correcto. Lo has conseguido en " + intentos + " intentos.");
 
   }
-
 }

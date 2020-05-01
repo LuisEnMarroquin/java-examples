@@ -1,12 +1,12 @@
-package mp3;
+package examples;
 
 import javax.swing.*;
 
-public class Swing extends JFrame {
+public class SwingSimple extends JFrame {
 
   private static final long serialVersionUID = 1L;
 
-  public Swing() {
+  public SwingSimple() {
     super("hello");
     super.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     super.add(new JLabel("Hello, world!"));
@@ -15,7 +15,7 @@ public class Swing extends JFrame {
   }
 
   public static void main(String[] args) {
-    new Swing();
+    new SwingSimple();
   }
 
 }

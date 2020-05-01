@@ -1,8 +1,7 @@
 package pildoras;
 import javax.swing.*;
 
-public class Pi018$Bucle_While {
-
+public class P018_BucleWhile {
   public static void main(String[] args) {
 
     String clave = "password";
@@ -17,5 +16,4 @@ public class Pi018$Bucle_While {
     System.out.println("Contrase�a correcta");
 
   }
-
 }

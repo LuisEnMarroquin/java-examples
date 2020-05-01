@@ -1,6 +1,9 @@
-# Oracle Certified Associate Java SE 8 Programmer
+## Java 8
 
-Exam 150 minutes, is needed grade 65% about 45 correct answers, total questions 70, ~200 USD.
+Environment variables
+
+* PATH = `D:\DesktopApps\jdk8\bin`
+* JAVA_HOME = `D:\DesktopApps\jdk8`
 
 | Sign | Reserved word | Description |
 |:-:|:--|:--|
@@ -44,12 +47,11 @@ instance regardless of the package or its origin.
 
 Order: **Public** => **Protected** => **Default** => **Private**
 
-## Edit environment variables
+## Oracle Certified Associate Java SE 8 Programmer
 
-* PATH = `D:\DesktopApps\jdk8\bin`
-* JAVA_HOME = `D:\DesktopApps\jdk8`
+Exam 150 minutes, is needed grade 65% about 45 correct answers, total questions 70, ~200 USD
 
-# UML (Unified Modeling Language)
+## UML (Unified Modeling Language)
 
 It is a graphic language for the modeling and development of software systems
 

@@ -1,8 +1,7 @@
 package pildoras;
 import javax.swing.JOptionPane;
 
-public class Pi015$ClaseJOptionPane_printf {
-
+public class P015_ClassJOptionPane {
   public static void main(String[] args) {
 
     String nombre_usuario = JOptionPane.showInputDialog("Introduce tu nombre"); //Recibe un objeto, en este caso un String (un String no es un tipo de dato, es un objeto perteneciente a la clase String)
@@ -25,5 +24,4 @@ public class Pi015$ClaseJOptionPane_printf {
     System.out.printf("%1.4f",Math.sqrt(num2)); //Se pas� a double porque el m�todo .sqrt exige que se le pase un double.
 
   }
-
 }

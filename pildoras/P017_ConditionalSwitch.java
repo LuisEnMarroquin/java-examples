@@ -4,8 +4,7 @@ import javax.swing.*;
 
 //Es importante lo que menciona en el minuto 10 del video acerca de los m�todos est�ticos.
 
-public class Pi017$Condicional_Switch {
-
+public class P017_ConditionalSwitch {
   public static void main(String[] args) {
 
     Scanner entrada = new Scanner(System.in);
@@ -39,5 +38,4 @@ public class Pi017$Condicional_Switch {
     }
 
   }
-
 }

@@ -1,8 +1,7 @@
 package pildoras;
 import java.util.*;
 
-public class Pi016$Condicional_If {
-
+public class P016_ConditionalIf {
   public static void main(String[] args) {
 
     Scanner entrada = new Scanner(System.in);
@@ -31,5 +30,4 @@ public class Pi016$Condicional_If {
     entrada.close();
 
   }
-
 }
