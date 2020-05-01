@@ -1,4 +1,4 @@
-package mp3;
+package examples;
 
 import java.util.Random;
 import java.util.Vector;
@@ -8,8 +8,7 @@ public class RandomIterator {
   int max; // highest number generated will be max-1
   Random select = new Random();
 
-  // constructor
-  public RandomIterator(int max) {
+  public RandomIterator(int max) { // constructor
     used = new Vector<Integer>(max);
     this.max = max;
   }

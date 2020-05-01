@@ -2,8 +2,6 @@
 
 package pi028$POO_Packages; //Por convenci�n los paquetes en Java comienzan con letra minuscula.
 
-//Aqu� se colocar�a el import.
-
 public class Pi029$POO_Coche { //Comportamiento de un objeto = m�todo()
 
   //Propiedades

@@ -1,7 +1,7 @@
 package pildoras;
 import javax.swing.*;
 
-public class Pi020$Bucle_DoWhile_PesoIdeal {
+public class P020_IdealWeightDoWhile {
 
   public static void main(String[] args) {
 
